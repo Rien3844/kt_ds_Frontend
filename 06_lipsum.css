@@ -57,3 +57,20 @@ h3 {
   width: 1000px;
   margin: 0 auto;
 }
+
+a:visited {
+  color: rgb(53, 53, 53);
+}
+
+.here:link {
+  color: red;
+  font-weight: 600;
+}
+
+.here:visited {
+  color: red;
+}
+
+a:hover {
+  color: crimson;
+}
