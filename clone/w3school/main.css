@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6f7;
+  color: #333;
+}
+
+/* 목록 스타일 */
+.vertical-list > li {
+  font-size: 14px;
+  padding: 3px 0;
+  list-style: none;
+}
+
+.horizontal-list,
+.vertical-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+}
+
+.horizontal-item {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: middle;
+  padding: 20px 15px;
+}
+
+/*  패딩 제거 */
+.no-padding {
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.main-top-navigator {
+  position: relative;
+}
+
+.position-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list:first-child
+  > .horizontal-item:first-child {
+  width: 50px;
+}
+
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list:first-child
+  > .horizontal-item:nth-child(n + 2):hover {
+  background-color: #04aa6d;
+  color: #fff;
+}
+
+/* .fixed-header
+  > .main-top-navigator
+  > .horizontal-list:first-child
+  > .horizontal-item:first-child:hover {
+  background-color: #fff;
+  color: #333;
+} */
+
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list:last-child
+  > .horizontal-item:not(.no-padding):hover {
+  padding: 0px 5px;
+}
+
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list:last-child
+  > .horizontal-item:hover
+  > div {
+  padding: 10px;
+  background-color: #eeea;
+  border-radius: 20px;
+}
+
+.main-top-logo {
+  width: 40px;
+}
+
+.skills {
+  background-color: #333;
+  color: #fff;
+}
+
+.fixed-header > .skills > .horizontal-list > .horizontal-item {
+  padding: 3px 10px;
+  font-size: 14px;
+}
+
+.fixed-header
+  > .skills
+  > .horizontal-list
+  > .horizontal-item:not(.active):hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.green-button {
+  background-color: #04aa6d;
+  border: 0px;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 7px;
+}
+
+.green-button:hover {
+  background-color: #009760;
+}
+
+.main-top-navigator,
+.skills > .horizontal-list {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+/* 메인 컨텐츠 스타일 */
+.contents {
+  width: 1400px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 83.5px;
+}
+
+.fixed-side-area {
+  position: fixed;
+  background-color: #e7e9eb;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+
+.fixed-side-area > h1 {
+  margin: 20px 0 8px 0;
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.fixed-side-area > .vertical-list > li:not(.active):hover {
+  background-color: #00000020;
+}
+
+.fixed-side-area > .vertical-list > li {
+  padding-left: 20px;
+}
+
+.main-content {
+  margin-left: 200px;
+}
+
+.main-content > .main-content-header {
+  position: relative;
+}
+
+.main-content > .main-content-header > h1 {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.main-content > .main-content-header > img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-content > .main-content-header > .green-button:last-child {
+  position: absolute;
+  right: 0;
+}
+
+.main-content > .content > h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.main-content > .content > div {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.main-content > .content > .courses {
+  position: relative;
+}
+
+.main-content > .content > .courses > .course-tutorial {
+  background-color: #00ff0032;
+  width: 49.5%;
+  /* height: 200px; */
+  display: inline-block;
+  padding: 90px 0px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.main-content > .content > .courses > .course-certificate {
+  position: absolute;
+  right: 0;
+  background-color: #ff001e32;
+  width: 49.5%;
+  /* height: 200px; */
+  display: inline-block;
+  padding: 90px 0px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.main-content > .content > .courses > .courses-center {
+  position: absolute;
+  top: calc(50% - 18px);
+  right: calc(50% - 20px);
+  background-color: white;
+  border: 1px solid #aaa;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.main-content > .content > .course-progress {
+  width: 100%;
+}
