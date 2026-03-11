@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+.page-layout_banner {
+  height: 90px;
+  background-color: rgb(233, 233, 233);
+}
+
+.page-layout_banner > .ad {
+  height: 57px;
+  background-color: white;
+  padding-left: 50px;
+}
