@@ -44,6 +44,7 @@ img {
   left: 0;
   right: 0;
   background-color: white;
+  z-index: 9999999999;
 }
 
 .main-top-navigator {
@@ -155,6 +156,7 @@ img {
   width: 200px;
   height: 100%;
   overflow: auto;
+  z-index: 909090909090;
 }
 
 .fixed-side-area > h1 {
@@ -240,6 +242,7 @@ img {
   border: 1px solid #aaa;
   padding: 10px;
   border-radius: 7px;
+  z-index: 89898989;
 }
 
 .main-content > .content > .course-progress {
