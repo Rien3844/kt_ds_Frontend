@@ -1,0 +1,13 @@
+.flex > li {
+  flex-basis: 100px;
+  /* flex-grow: 1; */
+}
+
+.flex {
+  flex-wrap: nowrap;
+}
+
+.vertical {
+  flex-direction: column;
+  height: auto;
+}

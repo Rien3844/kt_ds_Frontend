@@ -1,0 +1,23 @@
+.no-flex {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.no-flex > * {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+  /* 수평 배치 */
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.flex > li {
+  flex-basis: 100px;
+}

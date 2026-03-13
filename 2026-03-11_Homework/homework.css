@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -11,4 +15,103 @@ body {
   height: 57px;
   background-color: white;
   padding-left: 50px;
+}
+
+/*  패딩 제거 */
+.no-padding {
+  padding: 0;
+}
+
+.logo {
+  width: 83px;
+  height: 24px;
+  /* padding: 8px; */
+}
+
+.main-top-navigator {
+  position: relative;
+  padding: auto;
+}
+
+.horizontal-item {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  border: auto;
+  /* padding: 8px 11.2px; */
+}
+
+.main-top-navigator > .horizontal-list {
+  width: 1400px;
+  margin: auto;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+}
+
+.blank {
+  padding: 0 70px;
+}
+
+.tabimg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.search-button {
+  text-align: left;
+  color: #0a5dbd;
+  background-color: white;
+  background-image: url("./search.PNG");
+  background-repeat: no-repeat;
+  background-position: 54px 2px;
+  border: 1px solid #c3c7cb;
+  border-radius: 9999px;
+  margin: 0;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+  width: 5rem;
+}
+
+.search-button:hover {
+  background-color: #96989b;
+}
+
+.buttonbox > .search-button,
+.exit-button {
+  vertical-align: middle;
+}
+
+.flex {
+  display: flex;
+  /* 수평 배치 */
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+.fixed-header > .main-top-navigator > .horizontal-list > .itembox {
+  display: flex;
+  /* 수평 배치 */
+  flex-direction: row;
+  justify-content: space-around;
+  width: 800px;
+}
+
+.hoverblue:hover {
+  background-color: lightblue;
+}
+
+.hoverorange:hover {
+  background-color: lightcoral;
+}
+
+.hoverviolet:hover {
+  background-color: violet;
+}
+
+.hovergreen:hover {
+  background-color: lightgreen;
 }
