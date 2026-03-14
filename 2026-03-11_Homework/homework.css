@@ -5,19 +5,50 @@
 body {
   margin: 0;
 }
+/* ---------------------hover color----------------------------- */
+.hoverblue:hover {
+  background-color: lightblue;
+}
 
+.hoverorange:hover {
+  background-color: lightcoral;
+}
+
+.hoverviolet:hover {
+  background-color: violet;
+}
+
+.hovergreen:hover {
+  background-color: lightgreen;
+}
+
+.underline {
+  text-decoration: underline;
+}
+/* -----------------------main bar----------------------------- */
 .page-layout_banner {
+  display: flex;
+  flex-direction: column;
+  position: static;
   height: 90px;
-  background-color: rgb(233, 233, 233);
+  background-color: #f0f0f0;
+  z-index: 1;
 }
 
 .page-layout_banner > .ad {
-  height: 57px;
+  flex: 0 0 57px;
   background-color: white;
   padding-left: 50px;
+  border-bottom: 2px solid lightgray;
 }
 
-/*  패딩 제거 */
+.page-layout_banner > .under-ad {
+  flex: 1;
+  font-size: 0px;
+  background-color: rgb(233, 233, 233);
+  border-bottom: 2px solid lightgray;
+}
+
 .no-padding {
   padding: 0;
 }
@@ -25,12 +56,26 @@ body {
 .logo {
   width: 83px;
   height: 24px;
-  /* padding: 8px; */
+}
+
+.top-area {
+  position: relative;
+  display: flex; /* 묶은 div는 흐름 안에서 배치 */
+  flex-direction: column;
+}
+
+/* 네비게이션 전체를 고정 */
+.header-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .main-top-navigator {
-  position: relative;
-  padding: auto;
+  padding: 0.75rem;
+  border-bottom: 2px solid lightgray;
+  background-color: white;
 }
 
 .horizontal-item {
@@ -38,11 +83,12 @@ body {
   font-size: 16px;
   vertical-align: middle;
   border: auto;
-  /* padding: 8px 11.2px; */
 }
 
 .main-top-navigator > .horizontal-list {
-  width: 1400px;
+  min-width: 1000px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   margin: auto;
   padding: 0;
   font-size: 0;
@@ -71,6 +117,7 @@ body {
   margin: 0;
   padding: 0.25rem 0.25rem 0.25rem 0.75rem;
   width: 5rem;
+  height: 2rem;
 }
 
 .search-button:hover {
@@ -82,36 +129,269 @@ body {
   vertical-align: middle;
 }
 
+.buttonbox > .exit-button {
+  font-size: 0;
+  background-image: url(./exit-img.PNG);
+  background-repeat: no-repeat;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.buttonbox > .exit-button:hover {
+  background-color: #96989b;
+}
+
 .flex {
   display: flex;
-  /* 수평 배치 */
   flex-direction: row;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  justify-content: space-evenly;
+}
+
+.fixed-header {
+  height: 60px;
+  border-bottom: 1px solid lightgray;
 }
 
 .fixed-header > .main-top-navigator > .horizontal-list > .itembox {
   display: flex;
-  /* 수평 배치 */
   flex-direction: row;
   justify-content: space-around;
   width: 800px;
 }
 
-.hoverblue:hover {
-  background-color: lightblue;
+.fixed-header > .main-top-navigator > .horizontal-list > .itembox > li > a {
+  text-decoration: none;
+  color: black;
 }
 
-.hoverorange:hover {
-  background-color: lightcoral;
+/* --------------------sub bar----------------------------- */
+/* .sub-top-navigator {
+  position: fixed;
+  padding: 0 0.75rem;
+  border-bottom: 2px solid lightgray;
+  background-color: rgb(233, 233, 233);
+} */
+.sub-top-navigator {
+  height: 40px;
+  border-bottom: 1px solid lightgray;
+  background-color: rgb(233, 233, 233);
 }
 
-.hoverviolet:hover {
-  background-color: violet;
+.breadcrumbs-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  min-width: 1000px;
+  margin: auto;
+  padding: 0;
 }
 
-.hovergreen:hover {
-  background-color: lightgreen;
+.breadcrumbs-left > ul,
+.breadcrumbs-right > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs-left > ul > li {
+  padding: 0 3px;
+}
+
+.breadcrumbs-left > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+.breadcrumbs-left > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs-right > ul > li {
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+.breadcrumbs-right > ul > li > span > img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.breadcrumbs-right > ul > li > span {
+  vertical-align: top;
+}
+
+.breadcrumbs-right > ul > li > span:hover {
+  background-color: lightgray;
+}
+/* --------------------main-------------------- */
+.main-layout {
+  position: relative;
+  padding: 0 0.75rem;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding: 0;
+}
+
+.filter-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  height: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 9999px;
+}
+
+.filter-button > img {
+  width: 20px;
+  height: 20px;
+  padding-right: 0.25rem;
+}
+
+.main-layout > .fixed-leftside-area > ul > li {
+  list-style: none;
+}
+
+.main-layout > .fixed-leftside-area > ul > h4:hover,
+.main-layout > .fixed-leftside-area > ul > li:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.pad-l {
+  padding-left: 0.8rem;
+}
+
+.fixed-leftside-area {
+  position: fixed;
+  top: 190px;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 100px);
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+.main-content {
+  margin-top: 150px;
+  margin-left: 250px;
+  margin-right: 280px;
+  overflow-y: auto;
+}
+
+.main-content > ul > h2:hover {
+  text-decoration: underline;
+}
+
+.main-content > ul > li {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+.main-content > ul > li > a {
+  color: blue;
+}
+
+.main-content > ul > li > a:hover {
+  text-decoration: none;
+}
+
+.change-eng {
+  position: relative;
+  min-width: 620px;
+  height: 150px;
+  background-color: rgba(208, 243, 255, 0.442);
+  border: 1px solid rgba(208, 243, 255, 0.442);
+  border-left: 3px solid blue;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.englishh {
+  vertical-align: middle;
+  color: deepskyblue;
+  text-decoration: underline;
+}
+
+.eng-b-1 {
+  background-color: black;
+  color: white;
+}
+.eng-b-2 {
+  background-color: none;
+  border: none;
+}
+
+.change-eng > .button-pos {
+  position: absolute;
+  width: auto;
+  bottom: 20px;
+  right: 15px;
+}
+
+.eng-b-1:hover {
+  background-color: rgba(0, 0, 0, 0.76);
+}
+.eng-b-2:hover {
+  background-color: antiquewhite;
+}
+
+.fixed-rightside-area {
+  position: fixed;
+  top: 190px;
+  right: 0;
+  width: 250px;
+  height: calc(100% - 100px);
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+.fixed-rightside-area > ul > li {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.fixed-rightside-area > ul > li:hover {
+  color: blue;
+  text-decoration: underline;
+}
+/* ---------------------------table----------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse; /* 테두리 겹침 제거 */
+}
+tbody > tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.a-normal {
+  color: blue;
+  text-decoration: underline;
+}
+
+.a-backg {
+  color: blue;
+  background-color: #dadada;
+  text-decoration: underline;
+}
+
+tbody > tr > td > a:hover {
+  text-decoration: none;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px 12px; /* 셀 안쪽 여백 */
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
 }
