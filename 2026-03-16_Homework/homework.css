@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  background-color: aliceblue;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-layout {
+  width: 72.5rem;
+  height: 60rem;
+
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2.5rem 1.5fr 2.5rem 1fr 1fr 1fr 1.25rem 2.5rem;
+}
+
+.left-banner-content,
+.right-banner-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.left-banner-content {
+  grid-column: 1/3;
+}
+
+.right-banner-content {
+  grid-column: 3/5;
+}
+
+.left-banner,
+.right-banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.left-banner {
+  grid-column: 1/3;
+
+  background-image: url(./emart.PNG);
+}
+
+.right-banner {
+  grid-column: 3/5;
+
+  background-image: url(./star.PNG);
+}
+
+.left-option-grid {
+  grid-column: 1/3;
+}
+
+.right-option-grid {
+  grid-column: 3/5;
+}
+
+.left-option,
+.right-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.green-box,
+.violet-box {
+  width: 5rem;
+  height: 3rem;
+  text-align: center;
+  align-content: center;
+}
+
+.green-box:hover {
+  color: white;
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 9999px;
+}
+
+.violet-box:hover {
+  color: white;
+  background-color: purple;
+  border: 1px solid purple;
+  border-radius: 9999px;
+}
+
+.product {
+  background-image: url(./product.PNG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.left-product-content {
+  grid-column: 1/3;
+  color: lightgray;
+}
+
+.right-product-content {
+  grid-column: 3/5;
+  color: lightgray;
+}
+
+.more-product,
+.free-div-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 9999px;
+  background-color: lightgray;
+}
+.more-product > h4,
+.free-div-product > h4 {
+  background-color: lightgray;
+}
+
+.more-product {
+  grid-column: 1/3;
+}
+
+.free-div-product {
+  grid-column: 3/5;
+}
