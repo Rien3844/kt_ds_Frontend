@@ -8,19 +8,21 @@
 
 .item-a {
   display: inline-block;
-  width: 50%;
-  min-width: 400px;
-  max-width: 450px;
-  border: 1px solid lightgray;
+  width: 50vw;
+  min-width: 25rem /*400px*/;
+  max-width: 43.75rem /*700px*/;
+  border: 1px solid #ccc;
   font-size: 1rem;
 }
 
 .item-b {
   display: inline-block;
-  width: 50%;
-  height: 100%;
+  width: 50vw;
+  height: 100vh;
   min-height: 3.125rem;
   max-height: 12.5rem;
-  border: 0.16rem solid lightgray;
+  overflow: auto;
+
+  border: 0.0625rem solid #ccc;
   font-size: 2rem;
 }

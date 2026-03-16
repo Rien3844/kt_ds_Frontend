@@ -62,6 +62,7 @@ body {
   position: relative;
   display: flex; /* 묶은 div는 흐름 안에서 배치 */
   flex-direction: column;
+  height: auto;
 }
 
 /* 네비게이션 전체를 고정 */
