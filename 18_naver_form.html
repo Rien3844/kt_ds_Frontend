@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>naver-form-prac</title>
+    <link rel="stylesheet" type="text/css" href="./18_naver_form.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="basic-info">
+        <label for="user-id">i</label>
+        <input type="text" id="user-id" placeholder="아이디" />
+        <span>@naver.com</span>
+
+        <label for="user-password">p</label>
+        <input type="text" id="user-password" placeholder="비밀번호" />
+        <span>eye</span>
+
+        <label for="user-email">e</label>
+        <input
+          type="text"
+          id="user-email"
+          placeholder="[선택]이메일주소(비밀번호 찾기 등 본인 확인용)"
+        />
+      </div>
+      <div class="personal-info">
+        <label for="user-name">n</label>
+        <input type="text" id="user-name" placeholder="이름" />
+
+        <label for="user-birth">b</label>
+        <input type="date" id="user-birth" placeholder="생년월일 8자리" />
+
+        <label for="user-mobile-carrier">mc</label>
+        <select id="user-mobile-carrier">
+          <option value="">통신사 선택</option>
+          <option value="">KT</option>
+          <option value="">KT 알뜰폰</option>
+          <option value="">SKT</option>
+          <option value="">SKT 알뜰폰</option>
+          <option value="">LG U+</option>
+          <option value="">LG U+ 알뜰폰</option>
+        </select>
+
+        <div class="empty"></div>
+        <div class="user-type">
+          <div class="gender">
+            <input type="radio" name="gender" id="male" />
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female" />
+            <label for="female">여자</label>
+          </div>
+
+          <div class="foreigner">
+            <input type="radio" name="foreigner" id="in" />
+            <label for="in">내국인</label>
+            <input type="radio" name="foreigner" id="out" />
+            <label for="out">외국인</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="tel-info">
+        <label for="user-phone-number">tel</label>
+        <input
+          type="tel"
+          id="user-phone-number"
+          placeholder="휴대전화번호"
+          pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"
+        />
+      </div>
+      <div class="agreement-info">
+        <input type="checkbox" />
+        <li>[필수]</li>
+        <h4>인증 약관 전체동의</h4>
+      </div>
+    </div>
+  </body>
+</html>

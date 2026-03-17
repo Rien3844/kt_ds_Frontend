@@ -10,6 +10,8 @@ body {
   background-color: #484646;
   margin: 0;
   height: 100%;
+  font-family: "Black Han Sans", sans-serif;
+  /* 폰트의 적용 우선순위. => 앞의 폰트가 존재하면 해당폰트 사용, 없으면 뒤에 폰트 사용. */
 }
 
 .wrapper {
