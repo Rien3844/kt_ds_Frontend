@@ -1,0 +1,33 @@
+.grid {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+}
+/* thead는 content를 담는 영역이 아니므로 background-color정도만 주고 나머지(padding, margin등)는 그 밑의 th에 주게됨 <== 직접적인 값이 들어가는 영역 */
+.grid > thead {
+  background-color: white;
+  padding: 10px 0;
+}
+
+.grid > thead > tr > th {
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f3f3;
+  border-right: 1.5px dashed #f3f3f3;
+}
+
+.grid > thead > tr > th:last-child {
+  border-right: 0;
+}
+
+.grid > tbody > tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+.grid > tbody > tr:hover {
+  background-color: #a3c3c3;
+}
+
+.grid > tbody > tr > td {
+  padding: 10px 0;
+}

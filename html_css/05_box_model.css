@@ -1,0 +1,28 @@
+.content-box {
+  /* box-sizing = content-box */
+  /* 박스 너비 지정. */
+  width: 500px;
+  background-color: #70700e;
+  /* 색깔 코드 : 앞과 뒤가 같으면 앞만 따서 3글자로 표현 가능.(ffff00은 앞만 따서 ff0으로 가능) */
+
+  /* padding => content와 테두리 사이의 여백 */
+  /*       top right bottom left */
+  padding: 5px 12px 7px 3px;
+  border: 10px solid #000;
+
+  /* box model의 크기와 관계없음.
+  박스들을 떨어트리는 용도. */
+
+  margin: 10px 20px 30px 40px;
+}
+
+.border-box {
+  /* 박스의 크기 기준을 border로 지정한다. */
+  box-sizing: border-box;
+
+  width: 500px;
+  background-color: #f0f;
+  padding: 5px 12px 7px 3px;
+  border: 10px solid #000;
+  margin: 10px 20px 30px 40px;
+}

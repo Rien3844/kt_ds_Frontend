@@ -1,0 +1,38 @@
+.grid-layout {
+  width: 500px;
+  height: 500px;
+
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 150px 1fr 200px;
+  grid-template-rows: minmax(50, auto) 1fr minmax(80px, auto);
+}
+
+.grid-layout > .top-header {
+  /* 가로로 병합 */
+  grid-column: 1 / -1;
+  /* grid-column: 1 / 4; */
+  /* 위아래 같은코드 */
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  background-color: aqua;
+}
+
+.grid-layout > .footer {
+  grid-column: 2 / -1;
+  /* grid-column: 2 / 4; */
+  /* 위아래 같은코드 */
+  /*grid-column-start: 2;
+  grid-column-end: 4; */
+  background-color: brown;
+}
+
+.grid-layout > .aside {
+  /* 세로로 병합 */
+  grid-row: 2 / 4;
+  /* grid-row: 2 / 4; */
+  /* 위아래 같은코드 */
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+  background-color: darkgray;
+}

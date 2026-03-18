@@ -1,0 +1,97 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.form > .basic-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr minmax(3.125rem, auto);
+  border: 1px solid #ddd;
+}
+
+.form > .basic-info,
+.form > .personal-info,
+.form > .tel-info,
+.form > .agreement-info {
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.form > .basic-info input,
+.form > .personal-info input,
+.form > .personal-info select,
+.form > .tel-info input {
+  border: none;
+}
+
+.form > .personal-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr;
+  border: 1px solid #ddd;
+  gap: 0.125rem;
+}
+
+.form > .personal-info > .user-type {
+  gap: 0.625rem;
+}
+
+.form > .personal-info > .user-type,
+.form > .personal-info > .user-type > .gender,
+.form > .personal-info > .user-type > .foreigner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.3rem 0.625fr;
+
+  text-align: center;
+  align-content: center;
+}
+
+.form > .personal-info > .user-type input[type="radio"] {
+  display: none;
+}
+
+.form > .personal-info > .user-type input[type="radio"] + label {
+  border: 1px solid black;
+}
+
+.form > .personal-info > .user-type input[type="radio"] + label:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.form > .personal-info > .user-type input[type="radio"] + label:last-of-type {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.form > .personal-info > .user-type input[type="radio"]:checked + label {
+  border-color: rgb(13, 203, 13);
+  color: rgb(13, 203, 13);
+}
+
+.form > .tel-info,
+.form > .agreement-info {
+  border: 1px solid #ddd;
+}
+
+.form > .tel-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr;
+}
+
+.form > .agreement-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.625em;
+}
+
+.form > .agreement-info > li {
+  list-style: none;
+  color: rgb(0, 183, 0);
+}
+
+.form > .agreement-info > h4 {
+  font-size: 1.25rem;
+}
