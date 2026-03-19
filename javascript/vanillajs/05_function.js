@@ -44,39 +44,35 @@ window.onload = function () {
 
   // setTimeout(함수, 지연시간) ==> 함수를 지연시간 뒤에 실행.
 
-  // // 함수를 변수에 할당.
-  // var printMessage = function printMessage(message) {
-  //   console.log(message);
-  // };
-  // console.log(printMessage, typeof printMessage);
+  // 함수를 변수에 할당.
+  var printMessage = function printMessage(message) {
+    console.log(message);
+  };
+  console.log(printMessage, typeof printMessage);
 
-  // // 변수에 할당된 함수를 호출.
-  // printMessage("asdffsafd");
+  // 변수에 할당된 함수를 호출.
+  printMessage("asdffsafd");
 
-  // function printSumResult(from, to) {
-  //   setTimeout(function () {
+  function printSumResult(from, to) {
+    setTimeout(function () {
+      var sum = 0;
+      for (var i = from; i <= to; i++) {
+        sum += i;
+      }
+      console.log(sum);
+      endFunction(sum);
+    }, 3000);
+  }
 
-  //   var sum = 0;
-  //   for (var i = from; i <= to; i++) {
-  //     sum += i;
-  //   }
-  //   console.log(sum);
-  //   endFunction(sum);
-  //   }, 3000);
+  printSumResult(1, 1000000000, function (sum) {
+    alert("결과는" + sum + "입니다.");
+  });
 
-  //   }
-  // }
-
-  // printSumResult(1, 1000000000, function(sum){
-  //   alert("결과는" + sum + "입니다.");
-  // });
-
-  // printSumResult(1000, 1000000000, function(sum){
-  //   if(
-  //   confirm("결과를 보시겠나요?")){
-  //     alert(sum);
-  //   }
-  // });
+  printSumResult(1000, 1000000000, function (sum) {
+    if (confirm("결과를 보시겠나요?")) {
+      alert(sum);
+    }
+  });
 
   printCalcResult(10, 20, "+");
   printCalcResult(10, 20, "-");
