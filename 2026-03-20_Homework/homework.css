@@ -4,8 +4,22 @@
 
 .main {
   background-color: lightgray;
-  width: 50%;
+  width: 40%;
   height: 50%;
+}
+
+.button-layer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.main-layer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .main,
@@ -15,6 +29,28 @@
 .item-status,
 .item-lists > li {
   border: 1px solid black;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  margin: 1.25rem 0 0 1.25rem;
+  gap: 0.625rem;
+}
+
+.add-item,
+.all-item-remove {
+  width: 8.75rem;
+  height: 2.5rem;
+}
+
+.list-box,
+.item-status {
+  width: 90%;
+  height: 90%;
+  margin: 0.625rem;
 }
 
 .item-lists {
@@ -30,4 +66,9 @@
   width: 80%;
   height: 2rem;
   list-style: none;
+}
+
+.item-lists > li:hover {
+  background-color: lightgreen;
+  color: chocolate;
 }
